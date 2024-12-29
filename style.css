@@ -469,7 +469,6 @@ span {
     }
 }
 
-
 /* About Section */
 .about {
     font-size: 2rem;
@@ -533,6 +532,7 @@ span {
         text-align: center;
     }
 }
+
 
 .heading {
     font-size: 8rem;
@@ -800,6 +800,87 @@ span {
         font-size: 1.2rem;
     }
 }
+
+/* Projects Section */
+.projects {
+    background: var(--bg-color);
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.projects .heading {
+    font-size: 3rem;
+    color: white;
+    margin-bottom: 3rem;
+}
+
+.projects .heading span {
+    color: var(--main-color);
+}
+
+/* Projects Container */
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 0 2rem;
+}
+
+/* Project Box */
+.project-box {
+    background: var(--second-bg-color);
+    border-radius: 1.5rem;
+    padding: 1rem;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+.project-box img {
+    width: 100%;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease-in-out;
+}
+
+.project-box h4 {
+    font-size: 2rem;
+    color: var(--main-color);
+    margin-bottom: 0.5rem;
+}
+
+.project-box p {
+    font-size: 1.4rem;
+    color: white;
+    line-height: 1.6;
+}
+
+/* Hover Effects */
+.project-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px var(--main-color);
+}
+
+.project-box:hover img {
+    transform: scale(1.1);
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .projects-container {
+        grid-template-columns: 1fr; /* Single column on smaller screens */
+    }
+
+    .project-box {
+        padding: 2rem;
+    }
+
+    .project-box img {
+        margin-bottom: 2rem;
+    }
+}
+
+
 
 /* Styling umum untuk bagian skill */
 .skils {
