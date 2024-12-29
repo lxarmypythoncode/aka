@@ -478,64 +478,61 @@ span {
     padding: 4rem 2rem;
 }
 
-/* Text Section */
-.aboutt {
-    text-shadow: 0 0 25px var(--main-color);
-    max-width: 100%;
-    margin: 0 auto;
-    text-align: left;
-}
-
 /* Layout Flexbox */
 .home-about {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 2rem;
-    flex-wrap: wrap; /* Allow wrap for smaller screens */
+    gap: 2rem;
 }
 
+/* Gambar */
 .home-about img {
-    position: relative;
-    top: 1.5rem;
     width: 20vw;
     height: 20vw;
     border-radius: 50%;
     box-shadow: 0 0 25px var(--main-color);
+    object-fit: cover;
     cursor: pointer;
     transition: 0.4s ease-in-out;
-    object-fit: cover;
-    margin-right: 3rem;
 }
 
-/* Hover Effect on Image */
+/* Hover Effect pada Gambar */
 .home-about img:hover {
     box-shadow: 0 0 25px var(--main-color),
                 0 0 50px var(--main-color),
                 0 0 100px var(--main-color);
 }
 
-/* Responsive Design */
+/* Teks */
+.aboutt {
+    text-align: justify;
+    line-height: 1.8;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    max-width: 50%;
+}
+
+/* Responsif untuk layar kecil */
 @media (max-width: 768px) {
     .home-about {
-        flex-direction: column; /* Gambar di atas teks */
+        flex-direction: column;
         align-items: center;
     }
 
     .home-about img {
-        width: 40vw; /* Ukuran gambar lebih besar di perangkat kecil */
+        width: 40vw;
         height: 40vw;
-        margin-right: 0;
         margin-bottom: 2rem;
     }
 
     .aboutt {
+        max-width: 90%;
         font-size: 1.4rem;
-        line-height: 1.6;
         text-align: center;
     }
 }
-
 
 .heading {
     font-size: 8rem;
