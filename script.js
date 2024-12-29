@@ -14,3 +14,17 @@ document.querySelectorAll('.tool-item').forEach(item => {
         item.style.transform = 'scale(1)';
     });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const projectBoxes = document.querySelectorAll(".project-box");
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+            }
+        });
+    });
+
+    projectBoxes.forEach((box) => observer.observe(box));
+});
