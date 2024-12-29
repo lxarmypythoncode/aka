@@ -481,7 +481,7 @@ span {
 /* Text Section */
 .aboutt {
     text-shadow: 0 0 25px var(--main-color);
-    max-width: 800px;
+    max-width: 100%;
     margin: 0 auto;
     text-align: left;
 }
